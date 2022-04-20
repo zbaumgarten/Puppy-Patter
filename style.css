@@ -1,0 +1,15 @@
+* {
+    border: 1px solid black;
+}
+
+#title {
+    text-align: center;
+}
+
+#clickButton {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    
+}

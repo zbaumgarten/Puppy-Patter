@@ -1,0 +1,1 @@
+let clickButton = document.getElementById('clickButton').addEventListener('click')

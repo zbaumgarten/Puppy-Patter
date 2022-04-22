@@ -2,6 +2,8 @@
     border: 1px solid black;
 }
 
+/* main header section */
+
 #title {
     text-align: center;
 }
@@ -10,13 +12,54 @@ header {
     display: flex;
     flex-direction: column;
     height: 20vh;
+    padding: 20px;
+}
+
+body {
+    display: flex;
+}
+
+/* main click button area */
+
+#game {
+    display: flex;
+    flex-direction: column;
+    min-width: 40%;
+    text-align: center;
 }
 
 #clickButton {
-    width: 350px;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    
+    width: 400px;
+    height: 400px;
+    padding: 10em;
 }
+
+#clickButton:active {
+    transform: scale(1.1);
+}
+
+/* Item shop stuff */
+
+#head {
+    min-width: 70vh;
+    height: 5vh;
+}
+
+.itemShop {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-width: 45%;
+}
+
+.item {
+    padding: 10px;
+    flex: 45%;
+    justify-content: space-evenly;
+}
+
+/* .dogImage {
+    width: 200px;
+    height: 200px;
+} */

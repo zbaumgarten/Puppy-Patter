@@ -6,6 +6,7 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <title>Puppy Patter!</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/paw.png">
+    
 </head>
 <body>
 
@@ -17,7 +18,7 @@
 
     <div id="game">
         <!-- click button/image -->
-        <img src="./assets/derpy-lab.png" id="clickButton" onclick="patGoodBoy()">
+        <img src="./assets/derpy-lab.png" id="lab">
         <!-- Pat info collector -->
         <p id="patCounter">How many times the good boy has been patted: <span id="patsNumber" class="number">0</span></p>
 
@@ -31,61 +32,37 @@
     <aside class="itemShop">
         <h2 id="head">Item Shop!</h2>
         <div class="item">
-            
+            <!-- round boy shop item -->
             <div class="containerImage">
             <img src="./assets/round-boi.png" class="dogImage" alt="Round-Boy" style="height:200px; width:200px">
             
                 <div class="buyButtonContainer">
-                    <button class="buyButton"></button>
+                    <button id="roundBoyBuyBtn" class="buyButton">Adopt a Round Boy</button>
                 </div>
              </div>
             
             <div class="containerText">
-                <p>Round Boys Owned: <span id="roundBoyNum">0</span></p>
-            
+                <p>Round Boys Owned: <span id="roundBoyTotal">0</span></p>
                 <p>Round Boy Cost: <span id="roundBoyCost">25</span> pats</p>
-            
                 <p>+1 pats per second.</p>
-            
             </div>
             
         </div>
-            
+
         <div class="item">
-            
-            <div class="containerImage">
-                <img src="./assets/long-boy.png" class="dogImage" alt="Long-Boy" style="height:200px; width:300px">
-            
-                <div class="buyButtonContainer">
-                    <button class="buyButton"></button>
-                </div>
-            </div>
-            
-            <div class="containerText">
-                <p>Long Boys Owned: <span id="longBoyNum">0</span></p>
-            
-                <p>Long Boy Cost: <span id="longBoyCost">100</span> pats</p>
-            
-                <p>+5 pats per second.</p>
-            
-            </div>
-            
-        </div>
-            
-        <div class="item">
-            
+            <!-- govnah shop item -->
             <div class="containerImage">
                 <img src="./assets/govnah.png" class="dogImage" alt="Oi', you got a loicense for them clicks?!?!" style="height:200px; width:250px">
             
                 <div class="buyButtonContainer">
-                    <button class="buyButton"></button>
+                    <button id="govnahBuyBtn" class="buyButton">Adopt a Govnah'</button>
                 </div>
             </div>
             
             <div class="containerText">
-                <p>Govnah's Owned: <span id="govnahNum">0</span></p>
+                <p>Govnah's Owned: <span id="govnahTotal">0</span></p>
             
-                <p>Govnah's Cost: <span id="govnahCost">250</span> pats</p>
+                <p>Govnah's Cost: <span id="govnahCost">200</span> pats</p>
             
                 <p>+1 pats per pat(click).</p>
             
@@ -95,19 +72,41 @@
         </div>
             
         <div class="item">
+            <!-- long boy shop item -->
+            <div class="containerImage">
+                <img src="./assets/long-boy.png" class="dogImage" alt="Long-Boy" style="height:200px; width:300px">
             
+                <div class="buyButtonContainer">
+                    <button id="longBoyBuyBtn" class="buyButton">Adopt a Long Boy</button>
+                </div>
+            </div>
+            
+            <div class="containerText">
+                <p>Long Boys Owned: <span id="longBoyTotal">0</span></p>
+            
+                <p>Long Boy Cost: <span id="longBoyCost">450</span> pats</p>
+            
+                <p>+5 pats per second.</p>
+            
+            </div>
+            
+        </div>
+            
+            
+        <div class="item">
+            <!-- fine boys shop item -->
             <div class="containerImage">
                 <img src="./assets/consortium-of-the-finely-dress.png" class="dogImage" alt="Consortium of the Finely Dressed" style="height:300px; width:300px">
             
                 <div class="buyButtonContainer">
-                    <button class="buyButton"></button>
+                    <button id="fineBuyBtn" class="buyButton">Adopt the Consortium of Finely Dressed Puppies</button>
                 </div>
             </div>
             
             <div class="containerText">
                 <!-- <p>Long Boys Owned: <span id="LongBoyNum">0</span></p> -->
             
-                <p>Consortium of the Finely Dressed Cost: <span id="fineCost">1001</span> pats</p>
+                <p>Consortium of the Finely Dressed Cost: <span id="fineCost">9001</span> pats</p>
             
                 <p>+100 pats per second.</p>
             
@@ -119,9 +118,8 @@
     </aside>
 
     
+    <script src="app.js"></script>
 
 
-    <script scr="app.js">
-    </script>
 </body>
 </html>

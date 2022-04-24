@@ -1,5 +1,6 @@
 * {
     border: 1px solid black;
+    text-align: center;
 }
 
 /* main header section */
@@ -24,24 +25,25 @@ body {
 #game {
     display: flex;
     flex-direction: column;
-    min-width: 40%;
+    min-width: 20%;
     text-align: center;
+
 }
 
-#clickButton {
+#lab {
     width: 400px;
     height: 400px;
-    padding: 10em;
+    padding: 1em;
 }
 
-#clickButton:active {
+#lab:active {
     transform: scale(1.1);
 }
 
 /* Item shop stuff */
 
 #head {
-    min-width: 70vh;
+    min-width: 100%;
     height: 5vh;
 }
 
@@ -55,10 +57,13 @@ body {
 
 .item {
     padding: 10px;
-    flex: 45%;
-    justify-content: space-evenly;
+    flex: 15%;
+    /* justify-content: space-evenly; */
 }
 
+p {
+    padding: 0;
+}
 /* .dogImage {
     width: 200px;
     height: 200px;

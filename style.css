@@ -1,5 +1,5 @@
 * {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     text-align: center;
 }
 
@@ -18,6 +18,7 @@ header {
 
 body {
     display: flex;
+    background-color: lightskyblue;
 }
 
 /* main click button area */
@@ -47,24 +48,28 @@ body {
     height: 5vh;
 }
 
+.dogImage {
+    background-color: bisque;
+}
+
 .itemShop {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     min-width: 45%;
+    
 }
 
 .item {
     padding: 10px;
     flex: 20%;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: rgb(179, 52, 52);
     /* justify-content: space-evenly; */
 }
 
 p {
     padding: 0;
 }
-/* .dogImage {
-    width: 200px;
-    height: 200px;
-} */

@@ -11,49 +11,70 @@ let govnahs = 0
 let mopGirls = 0
 let lilSweeties = 0
 let dBoys = 0
+let fine = 0
 
 // item shop vargables
 let roundBoyCost = 25
 let longBoyCost = 2500
 let govnahCost = 115
-let fineCost = 9001
+let fineCost = 20000
 let mopGirlCost = 200
 let lilSweetyCost = 1000
-let dBoyCost = 1200
+let dBoyCost = 12000
 let fourCost = 100000000
 
 //reset button
 
-const resetBtn = document.getElementById('reset').addEventListener('click', function() {
+function reset() {
     pats = 0
+    patsNumber.innerText = 0
     patsPerSecond = 0
+    pps.innerText = 0
     arms = 1
+    patsPerClick.innerText = 0
 
     roundBoys = 0
+    roundBoyTotal.innerText = 0
     longBoys = 0
+    longBoyTotal.innerText = 0
     govnahs = 0
+    govnahTotal.innerText = 0
     mopGirls = 0
+    mopGirlTotal.innerText = 0
     lilSweeties = 0
+    lilSweetyTotal.innerText = 0
     dBoys = 0
+    dBoyTotal.innerText = 0
 
     roundBoyCost = 25
+    roundBoyCostAmt.innerText = 25
     longBoyCost = 2500
+    longBoyCostAmt.innerText = 2500
     govnahCost = 115
-    fineCost = 9001
+    govnahCostAmt.innerText = 115
+    fineCost = 20000
+    fineCostAmt.innerText = 20000
     mopGirlCost = 200
+    mopGirlCostAmt.innerText = 200
     lilSweetyCost = 1000
-    dBoyCost = 1200
+    lilSweetyCostAmt.innerText = 1000
+    dBoyCost = 12000
+    dBoyCostAmt.innerText = 12000
     fourCost = 100000000
+    fourCostAmt.innerText = 100000000
+}
+
+const resetBtn = document.getElementById('reset').addEventListener('click', function() {
+    reset()
 })
 
 //FUNCTIONS?!?!?
 //main game counters and HTML selection
-const lab = document.getElementById('lab')
 const patsNumber = document.getElementById('patsNumber')
 const pps = document.getElementById('patsPerSecond')
 const patsPerClick = document.getElementById('patsPerClick')
 
-lab.addEventListener('click', function() {
+const lab = document.getElementById('lab').addEventListener('click', function() {
     pats += arms;
     patsNumber.innerText = pats
     // console.log(pats)
@@ -127,13 +148,14 @@ const govnahBuyBtn = document.getElementById('govnahBuyBtn').addEventListener('c
 const fineCostAmt = document.getElementById('fineCost')
 
 const fineBuyBtn = document.getElementById('fineBuyBtn').addEventListener('click', function() {
-    if (pats >= fineCost) {
+    if (pats >= fineCost && fine <= 0) {
         pats -= fineCost
+        fine++
         patsPerSecond = patsPerSecond + 1000
-        fineCostAmt.innerText = `Already Adopted!`
         pps.innerText = patsPerSecond
-        fineBuyBtn.removeEventListener('click', this.function())
-
+        this.innerText = 'Already Adopted!'
+    } else if (fine >= 0) {
+        alert('You already adopted the Consortium!')
     } else {
         alert('You do not have enough pats!')
     }
@@ -200,9 +222,7 @@ const fourBuyBtn = document.getElementById('fourBuyBtn').addEventListener('click
     if (pats >= fourCost) {
     
         alert('You have ascended to the land of Good Boys! Congratualtions!')
-
-        
-        fourBuyBtn.removeEventListener('click', this.function())
+        reset()
 
     } else {
         alert('You do not have enough pats!')

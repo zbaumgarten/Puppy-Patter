@@ -5,6 +5,8 @@ Hello, everyone!
 
 Welcome to my first project! I hope you all enoy it!
 
+This game is my take on the popular 'Cookie Clicker' games.
+
 I left room for adding onto the game in the future.
 
 Object of the game:
